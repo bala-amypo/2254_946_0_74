@@ -2,42 +2,45 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 
-
 @Entity
-
-public class Student {
+public class Student{
     @Id
     private int id;
-    private String studentname;
+    private String name;
+    private String email;
     private float cgpa;
-    public int getId() {
+    
+    public int getId(){
         return id;
+    }   
+    public void setId(int id){
+        this.id=id;
     }
-    public void setId(int id) {
-        this.id = id;
+    public String getName(){
+        return name;
     }
-    public String getStudentname() {
-        return studentname;
+    public void setName(String name){
+        this.name=name;
     }
-    public void setStudentname(String studentname) {
-        this.studentname = studentname;
+    public String getEmail(){
+        return email;
     }
-    public float getCgpa() {
+    public void setEmail(String email){
+        this.email=email;
+    }
+    public float getCgpa(){
         return cgpa;
     }
-    public void setCgpa(float cgpa) {
-        this.cgpa = cgpa;
+    public void setCgpa(float cgpa){
+        this.cgpa=cgpa;
     }
-    public Student(int id, String studentname, float cgpa) {
-        this.id = id;
-        this.studentname = studentname;
-        this.cgpa = cgpa;
+    public Student(int id,String name,String email,float cgpa){
+        this.id=id;
+        this.name=name;
+        this.email=email;
+        this.cgpa=cgpa;
     }
- public Student() {
+    public Student(){
+
     }
-
-
-
 }
-
-   
