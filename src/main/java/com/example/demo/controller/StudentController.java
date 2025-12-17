@@ -9,9 +9,11 @@ import org.springframework.web.bind. annotation. RestController;
 import com.example.demo.entity.Student;
 import com.example.demo.service. StudentService;
 
-@RestControllerpublic class StudentController{
+@RestController
+public class StudentController{
 
-    @AutowiredStudentService ser;
+    @Autowired
+    StudentService ser;
 
     @PostMapping("/adddata")
     public Student createData(@RequestBody Student stu){
@@ -19,8 +21,8 @@ import com.example.demo.service. StudentService;
     }
 
     @GetMapping("/fetchrecord")
-    public List<Student> fetchRecord(){
-        return ser.fetchRecord();
+    public List<Student> fetchData(){
+        return ser.fetchData();
     }
     }
    
