@@ -1,28 +1,29 @@
-import java.util.List;
+package com.example.demo.controller;
+
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.entity.Student;
 import com.example.demo.service.StudentService;
 
 @RestController
-public class StudentController{
-
+public class StudentController {
     @Autowired
-    StudentService ser;
+    StudentService data;
 
-    @PostMapping("/adddata")
+    @PostMapping("/createrecord")
     public Student createData(@RequestBody Student stu){
-        return ser.createData(stu);
+        return data.createData(stu);
     }
 
     @GetMapping("/fetchrecord")
     public List<Student> fetchData(){
-        return ser.fetchData();
+        return data.fetchData();
     }
+    @GetMapping("/fetchDataById/{id}")
+    public Optional fetchDataById(@PathVariable int id){
+        return data.fetchDataById(id);
     }
-   
+}
