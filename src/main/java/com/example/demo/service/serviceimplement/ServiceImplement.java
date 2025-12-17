@@ -2,7 +2,7 @@ package com.example.demo.service.serviceimplement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
-import com.example.demo.entity.StudentEntity;
+import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
 
