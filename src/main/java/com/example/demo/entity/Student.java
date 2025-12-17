@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 
 public class Student {
     @Id
-    
     private int id;
     private String studentname;
     private float cgpa;
