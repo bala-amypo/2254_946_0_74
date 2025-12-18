@@ -26,10 +26,10 @@ public class StudentController {
         return data.fetchDataById(id);
     }
     @PutMapping("/updatedata/{id}")
-    public ? fetchDataById(@PathVariable int id,@RequestBody Student stu){
+    public String fetchDataById(@PathVariable int id,@RequestBody Student stu){
         stu.setId(id);
-        ser.createData( stu);
-     return "Data Updated Successfully"
+        ser.createData(stu);
+     return "Data Updated Successfully";
     }
 
 }
